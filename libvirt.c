@@ -18,7 +18,7 @@ int main()
     }
     else
     {
-       printf("\n For Active domain IDs : \n");
+       printf("\n Active domain IDs are : \n");
        system("sudo xm list");
 
         while(1)
@@ -44,12 +44,13 @@ int main()
                 case 2:
                        printf("\n To view active Domain ID's enter '1':");
                        scanf("%d",&ch);
+                       printf("\n For Active domain IDs : \n");
+
                        if(ch==1)
                        {
-  	 		       printf("\n For Active domain IDs : \n");
    		      	       system("sudo xm list");
 		       }
- 		       printf("\n Please Insert the Active Domian ID ");
+ 		       printf("\n Please Insert the Active Domain ID ");
                        scanf("%d",&ID);
                        vdp=virDomainLookupByID(conn,ID);
 		       val=virDomainSuspend(vdp);
@@ -61,12 +62,12 @@ int main()
                 case 3:
                        printf("\n To view active Domain ID's enter '1':");
                        scanf("%d",&ch);
+                       printf("\n For Active domain IDs : \n");
                        if(ch==1)
                        {
-  	 		       printf("\n For Active domain IDs : \n");
    		      	       system("sudo xm list");
 		       } 
-           		printf("\n Please Insert the Active Domian ID ");
+           		printf("\n Please Insert the Active Domain ID ");
 	                scanf("%d",&ID);
    		        vdp=virDomainLookupByID(conn,ID);
 		        val=virDomainResume(vdp);
@@ -79,12 +80,12 @@ int main()
                 case 4: 
 		       printf("\n To view active Domain ID's enter '1':");
                        scanf("%d",&ch);
+                       printf("\n For Active domain IDs : \n");                     
                        if(ch==1)
                        {
-  	 		       printf("\n For Active domain IDs : \n");
    		      	       system("sudo xm list");
 		       }
-	                printf("\n Please Insert the Active Domian ID ");
+	                printf("\n Please Insert the Active Domain ID ");
           	        scanf("%d",&ID);
    	                vdp=virDomainLookupByID(conn,ID);
 			val=virDomainShutdown(vdp);
